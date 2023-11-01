@@ -1,9 +1,9 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
 
-echo "Running pre-commit hook..."
+echo "Running pre-commit hook..." >&2
 
-npm run lint
-npm run format
+npm run lint >&2
+npm run format >&2
 
-echo "Pre-commit hook completed."
+echo "Pre-commit hook completed." >&2
